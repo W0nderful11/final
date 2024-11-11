@@ -10,13 +10,39 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="favicon-16x16.png" type="image/png">
+    <style>
+        .card-title, .card-text {
+            overflow: visible;
+            text-overflow: unset;
+            white-space: normal;
+        }
+
+        .card-body {
+            min-height: 150px;
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .modal-body p {
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .navbar, .footer {
+            transition: background-color 0.3s ease;
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">News Dashboard</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,7 +75,7 @@
         </div>
     </main>
 
-    <footer class="footer bg-light text-center py-3">
+    <footer class="bg-light text-center py-3">
         <p>&copy; <span id="year"></span> News Dashboard</p>
     </footer>
 

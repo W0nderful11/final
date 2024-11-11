@@ -1,0 +1,104 @@
+:root {
+    --primary-bg: #f4f6f9;
+    --primary-text: #333;
+    --navbar-bg: #007bff;
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --btn-bg: #007bff;
+    --btn-hover-bg: #0056b3;
+    --aside-bg: #f8f9fa;
+    --transition-duration: 0.3s;
+}
+
+.dark-mode {
+    --primary-bg: #1f1f1f;
+    --primary-text: #e0e0e0;
+    --navbar-bg: #1f1f1f;
+    --card-bg: #2a2a2a;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --btn-bg: #4a90e2;
+    --btn-hover-bg: #357abd;
+    --aside-bg: #2a2a2a;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: Arial, sans-serif;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.navbar, .footer {
+    background-color: var(--navbar-bg);
+    color: #fff;
+    transition: background-color var(--transition-duration);
+}
+
+.card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    border: none;
+    border-radius: 8px;
+    transition: box-shadow var(--transition-duration), background-color var(--transition-duration);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-body {
+    color: var(--primary-text);
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    min-height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-text {
+    min-height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--btn-bg);
+    color: #fff;
+    border: none;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-hover-bg);
+    color: #fff;
+}
+
+aside {
+    background-color: var(--aside-bg);
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color var(--transition-duration);
+}
+
+button, .btn {
+    border-radius: 5px;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+#theme-toggle {
+    border-radius: 50%;
+    transition: background-color var(--transition-duration), transform var(--transition-duration) ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
